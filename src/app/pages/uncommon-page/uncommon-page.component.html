@@ -5,7 +5,12 @@
 
 <section class="grid grid-col-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mt-5">
   <app-card title="i18nSelectPipe">
-    <p>Hola mundo desde el padre</p>
-    <button class="btn btn-primary">Click Me</button>
+    <p>
+      Dear {{ client().gender | i18nSelect : invitationMap }}
+      {{ client().name }}, it is a pleasure to invite you to our event
+    </p>
+    <button class="btn btn-primary" (click)="changeClient()">
+      Change client
+    </button>
   </app-card>
 </section>
