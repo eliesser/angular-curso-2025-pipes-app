@@ -3,7 +3,7 @@
   <h3 class="text-xl font-thin">Pipes included in Angular</h3>
 </section>
 
-<div class="stats stats-vertical lg:stats-horizontal shadow mt-10">
+<div class="stats stats-vertical lg:stats-horizontal shadow mt-10 w-full">
   <div class="stat">
     <div class="stat-title">Lowercase Pipe</div>
     <div class="stat-value">{{ nameUpper() | lowercase }}</div>
@@ -20,5 +20,49 @@
     <div class="stat-title">Titlecase Pipe</div>
     <div class="stat-value">{{ fullName() | titlecase }}</div>
     <div class="stat-desc">{{ fullName() }}</div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="stats stats-vertical lg:stats-horizontal shadow w-full">
+  <div class="stat">
+    <div class="stat-title">Date Pipe</div>
+    <div class="stat-value">{{ customDate() | date }}</div>
+    <div class="stat-desc">J{{ customDate() }}</div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-title">Date | long | GMT-6</div>
+    <div class="stat-value">{{ customDate() | date : "long" : "GMT-6" }}</div>
+    <div class="stat-desc">J{{ customDate() }}</div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="stats stats-vertical lg:stats-horizontal shadow w-full">
+  <div class="stat">
+    <div class="stat-title">Date pipe:</div>
+    <div class="stat-value">
+      {{ customDate() | date : "dd/MM/yyyy" }}
+    </div>
+    <div class="stat-desc">J{{ customDate() }}</div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-title">Date pipe:</div>
+    <div class="stat-value">
+      {{ customDate() | date : "HH:mm:ss" }}
+    </div>
+    <div class="stat-desc">J{{ customDate() }}</div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-title">Date pipe:</div>
+    <div class="stat-value">
+      {{ customDate() | date : "EEE d, MMMMM" }}
+    </div>
+    <div class="stat-desc">J{{ customDate() }}</div>
   </div>
 </div>
