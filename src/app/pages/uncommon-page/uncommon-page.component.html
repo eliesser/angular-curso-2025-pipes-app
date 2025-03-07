@@ -14,3 +14,19 @@
     </button>
   </app-card>
 </section>
+
+<section class="grid grid-col-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mt-5">
+  <app-card title="i18nPluralPipe">
+    <p>
+      Actually,
+      {{ clients().length | i18nPlural : clientsMap() }}
+    </p>
+    <button
+      class="btn btn-primary"
+      (click)="deleteClient()"
+      [disabled]="clients().length === 0"
+    >
+      Delete client
+    </button>
+  </app-card>
+</section>
