@@ -13,9 +13,7 @@
       Change client
     </button>
   </app-card>
-</section>
 
-<section class="grid grid-col-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mt-5">
   <app-card title="i18nPluralPipe">
     <p>
       Actually,
@@ -28,5 +26,16 @@
     >
       Delete client
     </button>
+  </app-card>
+
+  <app-card title="SlicePipe">
+    <b>Original</b>
+    <p class="text-primary">{{ clients().join(", ") }}</p>
+
+    <b class="mt-2">Slice:0:2</b>
+    <p class="text-primary">{{ clients() | slice : 0 : 2 }}</p>
+
+    <b class="mt-2">Slice:1:2</b>
+    <p class="text-primary">{{ clients() | slice : 1 : 2 }}</p>
   </app-card>
 </section>
